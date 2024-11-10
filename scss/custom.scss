@@ -1,32 +1,106 @@
 // Custom.scss
-// This is the file you will want to update to customize your page.
+// Option A: Include all of Bootstrap
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400&display=swap");
+// Include any default variable overrides here (though functions won't be available)
 
-// Import Google fonts here
+// Define color variables first
+$primary: #A04ADD;
+$secondary: #3B53C7;
+$success: #A4D882;
+$info: #59C1EF;
+$warning: #FFF689;
+$danger: #E5446D;
+$light: #f2f2f2;
+$dark: #181853;
 
+// Now define the theme colors using the variables
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
 
+// Body background color
+$body-bg: $light;
 
-// Include any default variable overrides here (colors, font sizes, font family, etc..)
+.divider {
+    border-top: 0.5px solid $light;
+    margin-bottom: 15px;
+}
 
+.divider-light {
+    border-top: 0.5px solid #e3e2e2; 
+    margin-bottom: 15px;
+}   
 
+.btn-border-secondary {
+    background-color: transparent;
+    border: 2px solid $secondary;
+    color: $secondary;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    margin: 0.5rem;
+    padding: 0.370rem 0.75rem;
+}
 
-// Adjust nav link hover color here
+.bg-dark h3 {
+    margin-top: 10px; // Adjust this value as needed
+  }
+  
 
-
+// Changing navbar
+$navbar-light-color: $light;
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $primary;
+$navbar-dark-bg: $dark;
+$navbar-dark-color: $light;
+$navbar-link-hover-color: $primary;
 
 // Typography
-// Change font family for base text
+$font-family-sans-serif: 'Source Sans 3', sans-serif;
+$headings-font-family: 'Libre Baskerville', serif;
 
+.text-content {
+    flex: 1;  // Text content takes up available space
+    max-width: 50%;  // Optional, if you want to limit how much space the text can take
+  }
+  
+  .image-content {
+    flex: 0 0 auto; // Prevents the image from stretching to fill space
+  }
+  
+  .img-fluid {
+    width: 100%; // Ensure image is responsive
+    height: auto;
+  }
+  
 
-// Change font family for headings
+// Update heading font sizes
+$h1-font-size: 3.052rem;
+$h2-font-size: 2.441rem;
+$h3-font-size: 1.953rem;
+$h4-font-size: 1.563rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1rem;
 
-
-
-// Change font sizes for h1-h6 using values in assignment
-
-
+$line-height-base: 1.6;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-// Add additional custom code here
+// Then add additional custom code here
 
-// Target .navbar-brand and change font-family to use 'Libre Baskerville'.
+footer {
+  background-color: $dark;
+  color: $light;
+}
+
+// Change navbar brand font family
+.navbar-brand {
+  font-family: 'Libre Baskerville', serif;
+}

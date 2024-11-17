@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <title>Customizing Bootstrap demo</title>
    <link rel="stylesheet" href="css/custom.css" />
+   <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
  </head>
  <body>
    <nav class="navbar navbar-expand-lg bg-dark">
@@ -49,14 +50,17 @@
 
    <div class="container py-5 d-flex justify-content-between align-items-center">
     <div class="text-content">
-      <h1>Responsive heading for hero section</h1>
+      <h1 class="animate__animated animate__bounce">Responsive heading for hero section</h1> <!-- I used Animate.css's 'bounce' animation to grab the user's attention -->
+
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero recusandae doloremque placeat vitae atque suscipit temporibus rerum voluptates soluta aperiam fuga nisi</p>
       <a class="btn btn-primary" href="#" role="button">Primary</a>
       <a class="btn border-secondary" href="#" role="button">Secondary</a>
     </div>
     
     <div class="image-content">
-      <img src="images/image.png" style="width: 550px; height: auto;" class="img-fluid">
+      <img src="images/image.png" style="width: 550px; height: auto;" class="img-fluid animate__animated animate__slideInRight">
+<!-- I uses the 'slideInRight' animation to make the image enter from the right side. -->
+
     </div>
   </div>
   
@@ -68,19 +72,20 @@
       <div class="divider"></div>
   
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 animate__animated animate__zoomIn"> <!-- Each column following this one is using the 'zoomIn' animation from Animate.css. -->
+
           <h3>Primary</h3>
           <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
           <button class="btn btn-primary">Primary button</button>
         </div>
   
-        <div class="col-md-4">
+        <div class="col-md-4 animate__animated animate__zoomIn">
           <h3>Secondary</h3>
           <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
           <button class="btn btn-secondary">Secondary button</button>
         </div>
   
-        <div class="col-md-4">
+        <div class="col-md-4 animate__animated animate__zoomIn">
           <h3>Success</h3>
           <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
           <button class="btn btn-success">Success button</button>
@@ -88,18 +93,18 @@
       </div>
   
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 animate__animated animate__zoomIn">
           <h3>Info</h3>
           <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
           <button class="btn btn-info">Info button</button>
         </div>
   
-        <div class="col-md-4">
+        <div class="col-md-4 animate__animated animate__zoomIn">
           <h3>Warning</h3><p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
           <button class="btn btn-warning">Warning button</button>
         </div>
   
-        <div class="col-md-4">
+        <div class="col-md-4 animate__animated animate__zoomIn">
           <h3>Danger</h3>
           <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.
           </p>
